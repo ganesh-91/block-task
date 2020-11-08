@@ -5,10 +5,11 @@
 }
 
 .fence {
-    width: 1600px;
+    width: 800px;
     display: grid;
     /* padding: 2em; */
     /* outline: 1px solid black; */
+    margin: auto;
     min-height: 200px;
     height: 100%;
     position: relative;

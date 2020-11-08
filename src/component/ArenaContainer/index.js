@@ -58,7 +58,7 @@ const ArenaContainer = () => {
             })
             let position = document.getElementById('fence-element').getBoundingClientRect();
             let boxPos = document.getElementById(`box_${selectedBox}`).getBoundingClientRect();
-            let top = computeVal(boxPos.top, (position.top), ((Math.ceil(boxArray.length / 8) * 200)), 87, 83)
+            let top = computeVal(boxPos.top, (position.top), ((Math.ceil(boxArray.length / 4) * 200)), 87, 83)
             let left = computeVal(boxPos.left, (position.left), (position.right), 65, 68)
             newBoxArray[index].top = top;
             newBoxArray[index].left = left;

@@ -6,9 +6,9 @@ const BoxFence = (props) => {
         <div className="fence-wrapper">
             <div id='fence-element' className="fence">
                 {props.boxArray.map((el, inx) => {
-                    let rowNo = Math.floor(inx / 8)
+                    let rowNo = Math.floor(inx / 4)
                     let top = rowNo * 200;
-                    let left = (inx % 8) * 200;
+                    let left = (inx % 4) * 200;
 
                     let style = {
                         zIndex: el.id,
