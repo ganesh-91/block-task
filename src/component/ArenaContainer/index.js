@@ -37,8 +37,7 @@ const ArenaContainer = () => {
     }
 
     const computeVal = (v, minLimit, maxLimit, a, b) => {
-        let n = parseInt(v) - (dimension[a] ? 200 : 0) + (dimension[b] ? 200 : 0);
-
+        let n = parseInt(v, 10) - (dimension[a] ? 100 : 0) + (dimension[b] ? 100 : 0);
         let val = n <= 0 ? 0 : (n <= minLimit ? v : (n >= maxLimit ? v : n));
         return val;
     }
@@ -56,10 +55,9 @@ const ArenaContainer = () => {
             newBoxArray.forEach((box, inx) => {
                 if (box.id === selectedBox) index = inx
             })
-            let position = document.getElementById('fence-element').getBoundingClientRect();
             let boxPos = document.getElementById(`box_${selectedBox}`).getBoundingClientRect();
-            let top = computeVal(boxPos.top, (position.top), ((Math.ceil(boxArray.length / 4) * 200)), 87, 83)
-            let left = computeVal(boxPos.left, (position.left), (position.right), 65, 68)
+            let top = computeVal(boxPos.top, 0, ((Math.ceil(boxArray.length / 8) * 100)), 87, 83);
+            let left = computeVal((boxPos.left), 0, 800, 65, 68);
             newBoxArray[index].top = top;
             newBoxArray[index].left = left;
         }

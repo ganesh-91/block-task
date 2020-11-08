@@ -1,24 +1,18 @@
 .fence-wrapper {
     height: 75%;
     overflow: auto;
-    /* padding: 2em; */
 }
 
 .fence {
     width: 800px;
-    display: grid;
-    /* padding: 2em; */
-    /* outline: 1px solid black; */
-    margin: auto;
-    min-height: 200px;
+    /* margin-left: 300px; */
     height: 100%;
     position: relative;
-    grid-template-columns: repeat(auto-fill, 200px);
     position: relative;
 }
 
 .box {
-    height: 200px;
+    height: 100px;
     counter-increment: grid-item;
     display: flex;
     justify-content: center;
@@ -30,13 +24,15 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 200px;
+    width: 100px;
     position: absolute;
     background-color: white;
+    color: gray;
 }
 
 .box.selected {
     font-weight: bolder;
     /* outline: 5px solid gray; */
+    color: white;
     background-color: gray;
 }
