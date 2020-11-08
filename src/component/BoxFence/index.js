@@ -3,7 +3,7 @@ import './style.css'
 
 const BoxFence = (props) => {
     return (
-        <div className="fence-wrapper">
+        <div id='fence-wrapper' className="fence-wrapper">
             <div id='fence-element' className="fence">
                 {props.boxArray.map((el, inx) => {
                     let rowNo = Math.floor(inx / 8)

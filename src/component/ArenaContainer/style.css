@@ -1,4 +1,5 @@
 .arena-container {
     height: 100%;
     overflow: hidden;
+    padding-top: 200px;
 }
